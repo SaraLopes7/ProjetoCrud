@@ -11,6 +11,7 @@
 
 
 body {
+  min-height: 100vh;
   background: #212534;
   display: flex;
   align-items: center;
@@ -30,7 +31,7 @@ body {
   border-radius: 6px;
   justify-content: center;
   align-items: center;
-/*   text-align: center; */
+  text-align: center;
   display: flex;
   font-size: 18px;
   color: rgb(88 199 250 / 100%);
@@ -93,29 +94,18 @@ Se deixar isso aqui, ele tira as cores quando o cursor toca no card
   }
 }
 
-.visualizar {
-  margin-left: -12%;
-}
-
-.visualizar div {
-  width: 130%;
-  height: 16px;
-  background-color: #8efbf7;
-  border-radius: 3px;
-}
-
-p {
-  margin-bottom: -9%;
-  margin-left: 2%;
-  width: 100%;
-}
-
-.visualizar div p {
-  color: 	#1C1C1C;
-  font-size: 14px;
-  margin-left: 2%;
-}
-
-div.anotacoes {
-  height: 40px;
+input {
+  color: #000080;
+  margin-bottom: 13%; 
+  border-radius: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: block;
+  background: #8efbf7;
+  border-style: outset;
+  border-color: #4e00c2;
+  width: 80%;
+  height: 30px;
+  margin-left: 10%;
 }

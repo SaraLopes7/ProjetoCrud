@@ -1,1 +1,126 @@
-css blabla
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+:root {
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
+
+body {
+  min-height: 100vh;
+  background: #212534;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 7%;
+  padding-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+
+.card {
+  background: #191c29;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+/*   text-align: center; */
+  display: flex;
+  font-size: 18px;
+  color: rgb(88 199 250 / 100%);
+  font-family: cursive;
+}
+
+/*
+Se deixar isso aqui, ele tira as cores quando o cursor toca no card
+.card:hover {
+  color: rgb(88 199 250 / 100%);
+  transition: color 1s;
+}
+.card:hover:before, .card:hover:after {
+  animation: none;
+  opacity: 0;
+}
+*/
+
+.card::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.card::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+label {
+  margin-left: 3%;
+}
+
+input {
+  color: #000080;
+  margin-bottom: 5%; 
+  border-radius: 10px;
+  border-style: outset;
+  border-color: #4e00c2;
+  padding: 5px 10px;  
+  display: block;
+}
+
+textarea {
+  color: #000080;
+  margin-bottom: 5%; 
+  border-style: outset;
+  border-color: #4e00c2;
+  padding: 5px 10px;
+  display: block;
+}
+
+input#adicionar {
+  margin-left: 27%;
+  padding: 5px 7px;  
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}

@@ -11,6 +11,7 @@
 
 
 body {
+  min-height: 100vh;
   background: #212534;
   display: flex;
   align-items: center;
@@ -30,9 +31,9 @@ body {
   border-radius: 6px;
   justify-content: center;
   align-items: center;
-/*   text-align: center; */
+  text-align: center;
   display: flex;
-  font-size: 18px;
+  font-size: 1.5em;
   color: rgb(88 199 250 / 100%);
   font-family: cursive;
 }
@@ -93,29 +94,30 @@ Se deixar isso aqui, ele tira as cores quando o cursor toca no card
   }
 }
 
-.visualizar {
-  margin-left: -12%;
+input {
+  display: block;
+  color: rgb(60 103 227);
+  margin-bottom: 20%;
+  padding: 4px 7px; 
+  border-radius: 30px;
 }
 
-.visualizar div {
-  width: 130%;
-  height: 16px;
-  background-color: #8efbf7;
-  border-radius: 3px;
+/*Muda a cor do texto do placeholder*/
+::-webkit-input-placeholder {
+   color: rgb(60 103 227 / 50%);
+}
+
+/*top right bottom left*/
+input#entrar {
+  margin-left: 31%;
+  padding: 7px 10px;  
+  font-weight: bold;
+	text-transform: uppercase;
+	cursor: pointer;
 }
 
 p {
-  margin-bottom: -9%;
-  margin-left: 2%;
-  width: 100%;
-}
-
-.visualizar div p {
-  color: 	#1C1C1C;
   font-size: 14px;
-  margin-left: 2%;
-}
-
-div.anotacoes {
-  height: 40px;
+  cursor: pointer;
+  text-decoration: underline; 
 }
