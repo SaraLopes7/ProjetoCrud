@@ -10,6 +10,13 @@ from flask import render_template, request, redirect, url_for, flash
 def index():
     return render_template("index.html")
 
+# Comentario de teste de permissao 
+def index():
+    return render_template("index.html")
+def index():
+    return render_template("index.html")
+
+#####################################################
 
 @app.route("/create", methods=["POST"])
 def inserir():
