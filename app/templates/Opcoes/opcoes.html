@@ -1,1 +1,25 @@
-html blabla 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='Opcoes/opcoes.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static',filename='favicon.ico') }}" type="image/x-icon">
+    <title>Opções</title>
+</head>
+<body>
+    <div class="card">
+        <div class="opcoes">
+          <form action="url de onde os dados serão enviados" method="get/post e afins">
+            <p class="usuario">Olá, zumano!</p>
+            <p>O que você deseja fazer?</p>
+            <input type="submit" id="adicionar" value="Adicionar Livro">
+            <input type="submit" id="visualizar" value="Visualizar Livro">
+            <input type="submit" id="atualizar" value="Atualizar Livro">
+            <input type="submit" id="deletar" value="Deletar Livro">
+          </form>
+        </div>
+      </div>
+</body>
+</html>
