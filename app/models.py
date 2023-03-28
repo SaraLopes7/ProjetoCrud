@@ -1,14 +1,20 @@
 from app import db, login_manager
 from flask_login import UserMixin
 
-def get_user(CPF):
-db.mycursor.execute("SELECT * FROM Usuarios WHERE CPF = %s", [CPF])
+def get_user(usuario):
+db.mycursor.execute("SELECT * FROM Usuarios WHERE usuario = %s", [usuario])
 return db.mycursor.fetchall()
 
-class User(UserMixin):
+class db_livraria(db.Model):
 
 
-def __init__(self, Nome, Autor, Genero, Paginas, Lidas, NomePessoa, Email, usuario, senha):
+def __init__(self, nome_usuario, email, usuario, senha, nome_livro, autor, genero, totalPginas, paginasLidas, anotacoes):
+    # cadastro pessoa
+    self.nomep = NomePessoa
+    self.Email = Email
+    self.usuario = usuario
+    self.senha = senha
+    
     # cadastro livro
     self.Nomeliv = Nome
     self.NomeAutorliv = Autor
@@ -17,11 +23,7 @@ def __init__(self, Nome, Autor, Genero, Paginas, Lidas, NomePessoa, Email, usuar
     self.paginaslidasliv = Lidas
     self.paginasRest = self.TotalPagliv - self.paginaslidasliv
 
-    # cadastro pessoa
-    self.nomep = NomePessoa
-    self.Email = Email
-    self.usuario = usuario
-    self.senha = senha
+    
 
 def inserirlivros(self):
     Values = (self.Nomeliv, self.NomeAutorliv, self.generoliv, self.TotalPagliv, self.paginaslidasliv)
