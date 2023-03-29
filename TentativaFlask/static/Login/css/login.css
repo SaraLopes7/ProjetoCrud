@@ -21,6 +21,11 @@ body {
   box-sizing: border-box;
 }
 
+.flash_alerta {
+  background-color: red;
+  font-size: 16px;
+  border-radius: 10px;
+}
 
 .card {
   background: #191c29;
@@ -33,7 +38,7 @@ body {
   align-items: center;
   text-align: center;
   display: flex;
-  font-size: 18px;
+  font-size: 1.5em;
   color: rgb(88 199 250 / 100%);
   font-family: cursive;
 }
@@ -95,17 +100,29 @@ Se deixar isso aqui, ele tira as cores quando o cursor toca no card
 }
 
 input {
-  color: #000080;
-  margin-bottom: 13%; 
-  border-radius: 30px;
-  font-weight: bold;
-  text-transform: uppercase;
-  cursor: pointer;
   display: block;
-  background: #8efbf7;
-  border-style: outset;
-  border-color: #4e00c2;
-  width: 80%;
-  height: 30px;
-  margin-left: 10%;
+  color: rgb(60 103 227);
+  margin-bottom: 20%;
+  padding: 4px 7px; 
+  border-radius: 30px;
+}
+
+/*Muda a cor do texto do placeholder*/
+::-webkit-input-placeholder {
+   color: rgb(60 103 227 / 50%);
+}
+
+/*top right bottom left*/
+input#entrar {
+  margin-left: 31%;
+  padding: 7px 10px;  
+  font-weight: bold;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+p {
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline; 
 }

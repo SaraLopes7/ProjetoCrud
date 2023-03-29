@@ -4,21 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=chrome">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static',filename='Login/login.css') }}">
-    <link rel="shortcut icon" href="{{ url_for('static',filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="../static/Login/css/login.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Login</title>
 </head>
 <body>
+
+    <!-- {% set menssagem = get_flashed_messages() %}
+    {% if menssagem %}
+      <div class="flash_alerta">
+        {{mensagem[0]}}
+      </div>
+    {% endif %} -->
+
     <div class="card">
         <div class="login">
-          <form action="url de onde os dados serão enviados" method="get/post e afins">
+          <form action="/login" method="POST">
             <label for="login">Usuário:</label>
-            <input type="text" id="login" name="login" placeholder="Digite seu usuário">  
+            <input type="text" id="login" name="user" placeholder="Digite seu usuário">  
             <label for="senha">Senha:</label>
             <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
             <input type="submit" id="entrar" value="Entrar">
           </form>
-          <p>Não Possuo Cadastro</p>
+          <p><a href="{{ url_for('cadastro') }}">Não Possuo Cadastro</a></p>
         </div>
     </div>
 </body>

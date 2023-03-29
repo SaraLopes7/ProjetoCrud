@@ -6,7 +6,7 @@ def get_user(id_usuario):
     db.mycursor.execute("SELECT * FROM Usuarios WHERE Id = %s", [id_usuario])
     return db.mycursor.fetchall()
 
-class db_livraria(UserMixin):
+class db_livraria():
     def __init__(self, id_usuario, nome_usuario, email, usuario, senha, id_livros, nome_livro, autor, genero, totalPginas, paginasLidas, anotacoes):   
         # cadastro usuario
         self.id_usuario = id_usuario

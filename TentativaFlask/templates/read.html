@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=chrome">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static',filename='Read/read.css') }}">
-    <link rel="shortcut icon" href="{{ url_for('static',filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="../static/Read/css/read.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Read</title>
 </head>
 <body>
@@ -27,3 +27,12 @@
       </div>
 </body>
 </html>
+
+{% for row in usuariosBD %}
+           <tr>
+             <td>{{ row[0] }}</td>
+             <td>{{ row[1] }}</td>
+             <td>{{ row[2] }}</td>
+             <td>{{ row[3] }}</td>
+           </tr>
+         {% endfor %}
