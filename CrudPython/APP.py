@@ -1,6 +1,5 @@
 from conexaobd import ConexaoDB
 from mysql.connector import Error
-import cadastroapp
 
 class app:
 
