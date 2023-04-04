@@ -1,10 +1,10 @@
 # Projeto AppLivro
-Este repositorio consta as linguagens e o nosso desenvolvimento quanto a uma cadeira da faculdade, onde tivemos que fazer um sistema simples de CRUD (back-end).
-No entanto, nao quisemos parar por ai, entao apos a entrega dessa "atividade", decidimos continuar construindo, para evoluir nossos conhecimentos e aprimorar nossas habilidades.
+<p> Este repositorio consta as linguagens e o nosso desenvolvimento quanto a uma cadeira da faculdade, onde tivemos que fazer um sistema simples de CRUD (back-end).</p>
+<p>No entanto, nao quisemos parar por ai, entao apos a entrega dessa "atividade", decidimos continuar construindo, para evoluir nossos conhecimentos e aprimorar nossas habilidades.</p>
 
-Espero que possamos te ajudar ou te iluminar em ideias ou em questoes de codigo.
+<p>Espero que possamos te ajudar ou te iluminar em ideias ou em questoes de codigo.</p>
 
-Obrigado e volte sempre!
+<p>Obrigado e volte sempre!</p>
 <br>
 <br>
 
